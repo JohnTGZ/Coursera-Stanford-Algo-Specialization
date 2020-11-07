@@ -71,7 +71,11 @@
       "shared_mutex": "cpp",
       "regex": "cpp",
       "valarray": "cpp",
-      "cuchar": "cpp"
+      "cuchar": "cpp",
+      "any": "cpp",
+      "bit": "cpp",
+      "charconv": "cpp",
+      "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
