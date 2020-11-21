@@ -57,8 +57,8 @@ void Union(node& i, node& j, node* nodes, std::vector<int>* clusters_arr, int& n
   //fuse 2 groups ci and cj into a single one
   // printf("comparing nodes i(%d) and j(%d)\n", i.idx, j.idx);
 
-  printf("BEFORE: u(%d)->parent(%d), v(%d)->parent(%d) \n", i.idx, i.parent->idx, 
-      j.idx, j.parent->idx);
+  // printf("BEFORE: u(%d)->parent(%d), v(%d)->parent(%d) \n", i.idx, i.parent->idx, 
+  //     j.idx, j.parent->idx);
 
   //its a cycle, therefore just skip
   if (Find(i) == Find(j)){
@@ -69,22 +69,21 @@ void Union(node& i, node& j, node* nodes, std::vector<int>* clusters_arr, int& n
   else{
     //add nodes from i's cluster in to j's cluster
     int i_prev_parent_idx_ = i.parent->idx;
-    printf("  Transferring out from cluster[%d] \n", i_prev_parent_idx_);
+    // printf("  Transferring out from cluster[%d] \n", i_prev_parent_idx_);
     for (int node_idx : clusters_arr[i_prev_parent_idx_]){
-      printf("    %d\n", node_idx);
+      // printf("    %d\n", node_idx);
       clusters_arr[j.parent->idx].push_back(node_idx);
       nodes[node_idx].parent = j.parent;
     }
-    printf("  added to cluster[%d]: \n", j.parent->idx);
-    for (int node_idx : clusters_arr[j.parent->idx]){
-      printf("    %d \n", node_idx);
-    }
-    // clusters_arr[i.parent->idx].clear();
+    // printf("  added to cluster[%d]: \n", j.parent->idx);
+    // for (int node_idx : clusters_arr[j.parent->idx]){
+      // printf("    %d \n", node_idx);
+    // }
     num_clusters--;
   }
 
-  printf("AFTER: u(%d)->parent(%d), v(%d)->parent(%d) \n", i.idx, i.parent->idx, 
-      j.idx, j.parent->idx);
+  // printf("AFTER: u(%d)->parent(%d), v(%d)->parent(%d) \n", i.idx, i.parent->idx, 
+  //     j.idx, j.parent->idx);
 
 }
 
