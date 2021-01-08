@@ -8,7 +8,7 @@
 
 int main(){
   //file input
-  std::string filepath = "knapsack_test1.txt";
+  std::string filepath = "knapsack1.txt";
   //t1: 147, t2:  210
   std::ifstream inFile(filepath);
   if (!inFile){
