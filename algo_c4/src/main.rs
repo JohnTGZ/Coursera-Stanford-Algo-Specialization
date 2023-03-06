@@ -1,4 +1,4 @@
-use algo_c4::w1::{Graph, johnson_algo};
+// use algo_c4::w1::{Graph, johnson_algo};
 
 // Week 1: Johnson Algorithm
 
@@ -19,11 +19,16 @@ use algo_c4::w1::{Graph, johnson_algo};
 
 // Week 2: TSP
 
-fn main () {
-    let tsp_g = algo_c4::w2::Graph::construct_adj_matrix("test_input/tsp.txt");
+// fn main () {
+//     let tsp_g = algo_c4::w2::Graph::construct_adj_matrix("test_input/tsp.txt");
 
-    tsp_g.plot_vertices("test_plots/tsp_map.png");
+//     tsp_g.plot_vertices("test_plots/tsp_map.png");
 
-    let tsp_dist = algo_c4::w2::tsp_algorithm(&tsp_g.adj_matrix, tsp_g.num_v);
-    println!("TSP dist: {}", tsp_dist);
+//     let tsp_dist = algo_c4::w2::tsp_algorithm(&tsp_g.adj_matrix, tsp_g.num_v);
+//     println!("TSP dist: {}", tsp_dist);
+// }
+
+// Week 3: TSP
+fn main() {
+
 }
