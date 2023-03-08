@@ -28,7 +28,40 @@
 //     println!("TSP dist: {}", tsp_dist);
 // }
 
-// Week 3: TSP
+// // Week 4: 2SAT
+// fn main() {
+//     let clauses_1 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat1.txt");
+//     // let clauses_2 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat2.txt");
+//     // let clauses_3 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat3.txt");
+//     // let clauses_4 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat4.txt");
+//     // let clauses_5 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat5.txt");
+//     // let clauses_6 = algo_c4::w4::Clauses::construct("test_input/2sat/2sat6.txt");
+
+//     println!("2Sat test 1: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_1));
+//     // println!("2Sat test 2: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_2));
+//     // println!("2Sat test 3: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_3));
+//     // println!("2Sat test 4: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_4));
+//     // println!("2Sat test 5: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_5));
+//     // println!("2Sat test 6: {} ", algo_c4::w4::papadimitriou_2_sat(&clauses_6));
+
+// }
+
+
+
+// Week 4: 2SAT
 fn main() {
+    let graph_1 = algo_c4::w4::Graph::construct("test_input/2sat/2sat1.txt");
+    let graph_2 = algo_c4::w4::Graph::construct("test_input/2sat/2sat2.txt");
+    let graph_3 = algo_c4::w4::Graph::construct("test_input/2sat/2sat3.txt");
+    let graph_4 = algo_c4::w4::Graph::construct("test_input/2sat/2sat4.txt");
+    let graph_5 = algo_c4::w4::Graph::construct("test_input/2sat/2sat5.txt");
+    let graph_6 = algo_c4::w4::Graph::construct("test_input/2sat/2sat6.txt");
+
+    println!("2sat 1: {}", algo_c4::w4::compute_satisfactibility(&graph_1));
+    println!("2sat 2: {}", algo_c4::w4::compute_satisfactibility(&graph_2));
+    println!("2sat 3: {}", algo_c4::w4::compute_satisfactibility(&graph_3));
+    println!("2sat 4: {}", algo_c4::w4::compute_satisfactibility(&graph_4));
+    println!("2sat 5: {}", algo_c4::w4::compute_satisfactibility(&graph_5));
+    println!("2sat 6: {}", algo_c4::w4::compute_satisfactibility(&graph_6));
 
 }
